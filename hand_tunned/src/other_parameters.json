@@ -1,0 +1,702 @@
+[
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.01
+    },
+    "accuracy": 21.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.03
+    },
+    "accuracy": 23.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.049999999999999996
+    },
+    "accuracy": 21.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.06999999999999999
+    },
+    "accuracy": 15.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.08999999999999998
+    },
+    "accuracy": 24.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.10999999999999997
+    },
+    "accuracy": 17.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.12999999999999998
+    },
+    "accuracy": 21.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.15
+    },
+    "accuracy": 16.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.16999999999999998
+    },
+    "accuracy": 22.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.18999999999999997
+    },
+    "accuracy": 13.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.20999999999999996
+    },
+    "accuracy": 21.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.22999999999999998
+    },
+    "accuracy": 16.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.24999999999999997
+    },
+    "accuracy": 19.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.26999999999999996
+    },
+    "accuracy": 24.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.29
+    },
+    "accuracy": 10.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.30999999999999994
+    },
+    "accuracy": 33.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.32999999999999996
+    },
+    "accuracy": 18.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.35
+    },
+    "accuracy": 18.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.36999999999999994
+    },
+    "accuracy": 22.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.38999999999999996
+    },
+    "accuracy": 17.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.4099999999999999
+    },
+    "accuracy": 18.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.42999999999999994
+    },
+    "accuracy": 19.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.44999999999999996
+    },
+    "accuracy": 20.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.4699999999999999
+    },
+    "accuracy": 27.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.48999999999999994
+    },
+    "accuracy": 15.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.5099999999999999
+    },
+    "accuracy": 21.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.5299999999999999
+    },
+    "accuracy": 21.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.5499999999999999
+    },
+    "accuracy": 24.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.57
+    },
+    "accuracy": 23.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.59
+    },
+    "accuracy": 23.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.6099999999999999
+    },
+    "accuracy": 13.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.6299999999999999
+    },
+    "accuracy": 15.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.6499999999999999
+    },
+    "accuracy": 25.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.6699999999999999
+    },
+    "accuracy": 21.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.69
+    },
+    "accuracy": 11.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.7099999999999999
+    },
+    "accuracy": 23.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.7299999999999999
+    },
+    "accuracy": 19.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.7499999999999999
+    },
+    "accuracy": 17.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.7699999999999999
+    },
+    "accuracy": 23.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.7899999999999999
+    },
+    "accuracy": 22.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.8099999999999998
+    },
+    "accuracy": 18.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.8299999999999998
+    },
+    "accuracy": 28.000000000000004
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.8499999999999999
+    },
+    "accuracy": 27.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.8699999999999999
+    },
+    "accuracy": 25.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.8899999999999999
+    },
+    "accuracy": 19.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.9099999999999999
+    },
+    "accuracy": 21.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.9299999999999998
+    },
+    "accuracy": 18.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.9499999999999998
+    },
+    "accuracy": 25.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.9699999999999999
+    },
+    "accuracy": 23.0
+  },
+  {
+    "params": {
+      "Y": 0.1,
+      "V_Y": 0.05,
+      "V_X": 0.05,
+      "V_THETA": 0.05,
+      "THETA": 0.05,
+      "X": 0.05,
+      "Y_WIND": 0.1,
+      "X_BOUNDARY": 0.5,
+      "MIN_THETA": 0.9899999999999999
+    },
+    "accuracy": 13.0
+  }
+]

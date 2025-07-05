@@ -1,0 +1,303 @@
+\documentclass[a4paper, 12pt, fleqn]{report}
+
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{caption}
+\geometry{a4paper, margin=1in}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{hyperref}
+
+\begin{document}
+
+% Cover page
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    \includegraphics[width=0.4\textwidth]{uc_logo.jpg}
+
+    {\Huge\bfseries Artificial Inteligence Fundamentals Lab Assignment 1 - Stage 1\par}
+    \vspace{0.1cm}
+    {\Large\itshape Perceptions, Actions and Production System Declarations \par}
+    \vfill
+    \vfill
+        \begin{center}
+            \large
+            \textbf{Members: \\}
+            Miguel Castela 2022212972, PL1\\
+            Miguel Martins 2022213951, PL1\\
+            Nuno Batista 2022216127, PL1
+    \end{center}
+    
+    \vfill
+    
+    {\large March, 2025 \par}
+\end{titlepage}
+
+% Table of contents
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents
+\newpage
+
+% Sections
+\section*{\fontsize{16}{20}\selectfont Perceptions}
+\addcontentsline{toc}{section}{Perceptions}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{3cm} p{3cm} p{10cm}}
+\textbf{Perception} & \textbf{Name} & \textbf{Description} \\[15pt]
+observation[0] & $x$ & Horizontal position relative to the landing platform. ($x < 0$ if the ship is to the left of the platform and $x > 0$ otherwise)\\[10pt]
+observation[1] & $y$ & Vertical position, relative to the ground. \\[10pt]
+observation[2] & $v_x$ & Horizontal velocity. Negative when the ship is going to the left and positive when its going to the right\\[10pt]
+observation[3] & $v_y$ & Vertical velocity. Negative when the ship is going down and positive when its going up \\[10pt]
+observation[4] & $\theta$ & Ship's orientation ($\theta < 0$ if the ship is tilted to the left of the platform and $\theta > 0$ otherwise) \\[10pt]
+observation[5] & $v_\theta$ & Angular velocity ($v_\theta > 0$ if the ship is rotating counter-clockwise and $v_\theta < 0$ if cloclwise)\\[10pt]
+observation[6] & $RLT$ & Boolean: $True$ if the right leg is in contact with the ground, $False$ otherwise \\[10pt]
+observation[7] & $LLT$ & Boolean: $True$ if the left leg is in contact with the ground, $False$ otherwise \\[10pt]
+\end{tabular}
+\caption{Perceptions Declaration}
+\label{tab:perceptions}
+\end{table} 
+
+
+
+\section*{\fontsize{16}{20}\selectfont Action Declaration}
+\addcontentsline{toc}{section}{Actions}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|p{1cm}|p{4cm}|p{11cm}|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Name}} & \multicolumn{1}{c|}{\textbf{Action}} & \multicolumn{1}{c|}{\textbf{Description}} \\ \hline
+Mm & Controls the main motor. & Activated for values larger than 0.5, linearly increases the acceleration until reaching the maximum value of 1. \\ \hline
+Lm & Controls the left motor. & Activated for values larger than 0.5, the left motor is activated, rotating the ship to the right. It's acceleration linearly increases until reaching the maximum value of 1.\\ \hline
+Rm & Controls the right motor. & Activated for values lower than -0.5, the right motor is activated, rotating the ship to the left. It's acceleration linearly increases until reaching the maximum value of -1. \\ \hline
+\end{tabular}
+\caption{Actions declaration}
+\label{tab:actions}
+\end{table}
+
+\newpage
+\section*{\fontsize{16}{20}\selectfont Final Production System}
+\addcontentsline{toc}{section}{Final Production System}
+\label{sec:production_system} % Add this line
+\begin{table}[h!]
+
+    \begin{tabular}{p{16cm}} 
+
+    \multicolumn{1}{c}{\textbf{Rules}} \\ 
+    
+    
+    
+    (1) $RLT \land LLT \rightarrow \text{NIL}$  \\  
+    (2) $RLT \land \neg LLT \rightarrow Md$ \\  
+    (3) $LLT \land \neg RLT \rightarrow Me$  \\  
+    (4) $y \ge 1.5 \rightarrow \text{NIL}$  \\  
+    (5) $\theta \leq -0.15 \land v_y > -0.2 \rightarrow Md$  \\  
+    (6) $\theta > 0.15 \land v_y > -0.2 \rightarrow Me$  \\  
+    (7) $\theta > 0.15 \land v_y \leq -0.2 \rightarrow Mp, Me$  \\  
+    (8) $\theta \leq -0.15 \land v_y \leq -0.2 \rightarrow Mp, Md$  \\  
+    (9) $v_\theta \leq -0.3 \land v_y > -0.2 \rightarrow Md$  \\  
+    (10) $v_\theta > 0.3 \land v_y > -0.2 \rightarrow Me$  \\  
+    (11) $v_\theta > 0.3 \land v_y \leq -0.2 \rightarrow Mp, Me$  \\  
+    (12) $v_\theta \leq -0.3 \land v_y \leq -0.2 \rightarrow Mp, Md$  \\  
+    (13) $v_x \leq -0.2  \land v_y > -0.2 \rightarrow Me$  \\  
+    (14) $v_x > 0.2  \land v_y > -0.2 \rightarrow Md$   \\  
+    (15) $v_x > 0.2 \land v_y \leq -0.2 \rightarrow Mp, Md$  \\  
+    (16) $x = 0 \rightarrow \text{NIL}$ \\  
+    (17) $x \leq 0.2   \rightarrow  Me, Mp$  \\  
+    (18) $x > 0.2   \rightarrow  Md, Mp$ \\  
+    (19) $v_y \leq -0.2 \rightarrow Mp$  \\  
+    (20) $v_y > 0.2 \rightarrow \text{NIL}$ \\  
+    
+    \end{tabular}
+    \caption{Production System}
+    \label{tab:production}
+\end{table}
+
+
+(1)-(3): Stabilize the ship's orientation to keep it aligned with the vertical axis while landing \\
+(4): Turn engines off if the ship goes too high \\
+(5)-(8): Stabilize the ship's orientation to keep it aligned with the vertical axis \\
+(9)-(12): Stabilize the ship's angular velocity to keep it aligned with a stabilized orientation \\
+(13)-(15):Stabilize the horizontal velocity, keeping it as low as possible using the secondary engines \\
+(16)-(18):Stabilize the horizontal position using the left and right engines \\
+(19)-(20):Stabilize the vertical velocity, keeping it as low as possible using the main engine \\
+
+\newpage
+\section*{\fontsize{16}{20}\selectfont Score Progression}
+\addcontentsline{toc}{section}{Score Progression without wind}
+
+\subsection*{Standard}
+\begin{itemize}
+    \item The first score obtained was \textbf{0.0\%}, since the ship's angular velocity was not being properly stabilized causing the ship to turn and get away from the landing platform.
+    \begin{table}[h!]
+        \begin{tabular}{p{16cm}} 
+
+        \multicolumn{1}{c}{\textbf{Rules}} \\ 
+
+        (1) $LLT \lor RLT \rightarrow \text{NIL}$ \\
+        
+        (2) $\theta \leq -0.3 \land v_y > -1.5 \rightarrow Md$ \\ 
+        (3) $\theta > 0.3 \land v_y > -1.5 \rightarrow Me$ \\  
+        (4) $\theta > 0.3 \land v_y \leq -1.5 \rightarrow Mp, Me$ \\  
+        (5) $\theta \leq -0.3 \land v_y \leq -1.5 \rightarrow Mp, Md$ \\
+    
+        (6) $v_\theta \leq -0.3 \land v_y > -1.5 \rightarrow Md$ \\ 
+        (7) $v_\theta > 0.3 \land v_y > -1.5 \rightarrow Me$ \\  
+        (8) $v_\theta > 0.3 \land v_y \leq -1.5 \rightarrow Mp, Me$\\  
+        (9) $v_\theta \leq -0.3 \land v_y \leq -1.5 \rightarrow Mp, Md$ \\ 
+        
+        (10) $v_x \leq -1.0  \land v_y > -1.5 \rightarrow Md$ \\ 
+        (11) $v_x > 1.0  \land v_y > -1.5 \rightarrow Me$ \\  
+        (12) $v_x > 1.0 \land v_y \leq -1.5 \rightarrow Mp, Me$ \\  
+        (13) $v_x \leq -1.0 \land v_y \leq -1.5 \rightarrow Mp, Md$ \\
+    
+        (14) $x = 0 \rightarrow \text{NIL}$ \\ 
+        (15) $x \leq 0  \land v_y > -1.5 \rightarrow  Me$ \\  
+        (16) $x > 0  \land v_y > -1.5 \rightarrow  Md$ \\  
+        (17) $x > 0 \land v_x \leq -1.5 \rightarrow Mp, Me$ \\  
+        (18) $x \leq 0 \land v_x \leq -1.5 \rightarrow Mp, Md$ \\ 
+    
+        (19) $v_y \leq -1.5 \rightarrow Mp$  
+        (20) $v_y > 1.5 \rightarrow \text{NIL}$ \\
+        \end{tabular}
+    \end{table}
+
+    \newpage
+    \item After establishing better thresholds for the angular velocity and Y velocity, we managed to achieve a score of \textbf{54.0\% with 42752 steps}.
+    \begin{table}[h!]
+        \begin{tabular}{p{16cm}} 
+        \multicolumn{1}{c}{\textbf{Rules}} \\             
+(1) $RLT \land LLT \rightarrow \text{NIL}$ \\  
+(2) $RLT \land \neg LLT \rightarrow Md$ \\  
+(3) $LLT \land \neg RLT \rightarrow Me$ \\  
+(4) $\theta \leq -0.3 \land v_y > -0.1 \rightarrow Md$ \\  
+(5) $\theta > 0.3 \land v_y > -0.1 \rightarrow Me$ \\  
+(6) $\theta > 0.3 \land v_y \leq -0.1 \rightarrow Mp, Me$ \\  
+(7) $\theta \leq -0.3 \land v_y \leq -0.1 \rightarrow Mp, Md$ \\  
+(8) $v_\theta \leq -0.2 \rightarrow Mp, Md$ \\  
+(9) $v_\theta > 0.2 \rightarrow Mp, Me$ \\  
+(10) $v_x \leq -0.2  \land v_y > -0.1 \rightarrow Me$ \\  
+(11) $v_x > 0.2  \land v_y > -0.1 \rightarrow Md$ \\  
+(12) $v_x > 0.2 \land v_y \leq -0.1 \rightarrow Mp, Md$ \\  
+(13) $v_x \leq -0.2 \land v_y \leq -0.1 \rightarrow Mp, Me$ \\  
+(14) $x = 0 \rightarrow \text{NIL}$ \\  
+(15) $x \leq 0.2   \rightarrow  Me, Mp$ \\  
+(16) $x > 0.2   \rightarrow  Md, Mp$ \\  
+(17) $v_y \leq -1 \rightarrow Mp$ \\  
+(18) $v_y > 1 \rightarrow \text{NIL}$ \\  
+
+        \end{tabular}
+    \end{table}
+
+
+    \item This value was further increased to \textbf{66.9\% with 48901 steps} as we paired the verification of the angular velocity with the Y velocity.
+    \begin{table}[h!]
+        \begin{tabular}{p{16cm}} 
+        \multicolumn{1}{c}{\textbf{Rules}} \\     
+
+        (1) $RLT \land LLT \rightarrow \text{NIL}$ \\  
+        (2) $RLT \land \neg LLT \rightarrow Md$ \\  
+        (3) $LLT \land \neg RLT \rightarrow Me$ \\  
+        
+        (4) $\theta \leq -0.3 \land v_y > -0.1 \rightarrow Md$ \\  
+        (5) $\theta > 0.3 \land v_y > -0.1 \rightarrow Me$ \\  
+        (6) $\theta > 0.3 \land v_y \leq -0.1 \rightarrow Mp, Me$ \\  
+        (7) $\theta \leq -0.3 \land v_y \leq -0.1 \rightarrow Mp, Md$ \\  
+        
+        (8) $v_\theta \leq -0.2 \land v_y > -0.1 \rightarrow Md$ \\  
+        (9) $v_\theta > 0.2 \land v_y > -0.1 \rightarrow Me$ \\  
+        (10) $v_\theta > 0.2 \land v_y \leq -0.1 \rightarrow Mp, Me$ \\  
+        (11) $v_\theta \leq -0.2 \land v_y \leq -0.1 \rightarrow Mp, Md$ \\  
+        
+        (12) $v_x \leq -0.2  \land v_y > -0.1 \rightarrow Me$ \\  
+        (13) $v_x > 0.2  \land v_y > -0.1 \rightarrow Md$ \\  
+        (14) $v_x > 0.2 \land v_y \leq -0.1 \rightarrow Mp, Md$ \\  
+        (15) $v_x \leq -0.2 \land v_y \leq -0.1 \rightarrow Mp, Me$ \\  
+        
+        (16) $x = 0 \rightarrow \text{NIL}$ \\  
+        (17) $x \leq 0.2   \rightarrow  Me, Mp$ \\  
+        (18) $x > 0.2   \rightarrow  Md, Mp$ \\  
+        
+        (19) $v_y \leq -1 \rightarrow Mp$ \\  
+        (20) $v_y > 1 \rightarrow \text{NIL}$ \\  
+            
+    
+        \end{tabular}
+    \end{table}
+
+    \newpage
+    \item After further constrictions on the thresholds for angular velocity, angle and Y velocity, and by adding a maximum y value that stops the ship from flying out of vertical range (rule 4) we managed to achieve a score of \textbf{81.39\% with 37050 steps}, using the production system stated \hyperref[sec:production_system]{here}.
+\end{itemize}
+\subsection*{Wind enabled}
+\addcontentsline{toc}{section}{Score Progression with wind}
+\begin{itemize}
+    \item The first production system used for this new environment, was very similar to the original one, with the only difference being the addition of a new rule that makes the ship drop if its below a certain y value (rule 19),
+    since before, with a slower aproach, it was being pushed by the wind, sometimes not stopping even when landed. With this we achieved an average \textbf{37.5\% hit score with 7621 steps} .
+
+    \begin{table}[h!]
+        \begin{tabular}{p{16cm}} 
+        \multicolumn{1}{c}{\textbf{Rules}} \\     
+        (1) $RLT \land LLT \rightarrow \text{NIL}$ \\  
+        (2) $RLT \land \neg LLT \rightarrow Md$ \\  
+        (3) $LLT \land \neg RLT \rightarrow Me$ \\  
+        (4) $y \ge 1.5 \rightarrow \text{NIL}$ \\  
+        (5) $\theta \leq -0.15 \land v_y > -0.2 \rightarrow Md$ \\  
+        (6) $\theta > 0.15 \land v_y > -0.2 \rightarrow Me$ \\  
+        (7) $\theta > 0.15 \land v_y \leq -0.2 \rightarrow Mp, Me$ \\  
+        (8) $\theta \leq -0.15 \land v_y \leq -0.2 \rightarrow Mp, Md$ \\  
+        (9) $v_\theta \leq -0.3 \land v_y > -0.2 \rightarrow Md$ \\  
+        (10) $v_\theta > 0.3 \land v_y > -0.2 \rightarrow Me$ \\  
+        (11) $v_\theta > 0.3 \land v_y \leq -0.2 \rightarrow Mp, Me$ \\  
+        (12) $v_\theta \leq -0.3 \land v_y \leq -0.2 \rightarrow Mp, Md$ \\  
+        (13) $v_x \leq -0.2 \land v_y > -0.2 \rightarrow Me$ \\  
+        (14) $v_x > 0.2 \land v_y > -0.2 \rightarrow Md$ \\  
+        (15) $v_x > 0.2 \land v_y \leq -0.2 \rightarrow Mp, Md$ \\  
+        (16) $x = 0 \rightarrow \text{NIL}$ \\  
+        (17) $x \leq 0.2 \rightarrow Me, Mp$ \\  
+        (18) $x > 0.2 \rightarrow Md, Mp$ \\  
+        (19) $y \geq  0.2 \rightarrow \text{NIL}$ \\
+        (20) $v_y \leq -0.2 \rightarrow Mp$ \\  
+        (21) $v_y > 0.2 \rightarrow \text{NIL}$ \\  
+        
+        \end{tabular}
+    \end{table}
+\newpage
+    \item For the final production system, we achieved an average score of \textbf{41.5\% with 8197 steps } after adding a dynamic theta threshold. The threshold is the $dynamic\_theta$ present in the production system (closer to the center = stricter requirement) and it corresponds to $x\_percentage = min(1.0, abs(x) / X\_BOUNDARY), dynamic\_theta = MIN\_THETA + (0.55 - MIN\_THETA) * x\_percentage$. Here, $X\_BOUNDARY = 1.0$ and it corresponds to the distance where we start caring about theta alignment with the vertical axis and $MIN\_THETA = 0.05$ and its the minimum threshold where x=0. These values and all the changes in the thresholds from the last production system were obtained by optimizing a cost function corresponding to the ship's hitrate with a bayesian optimization model. Ending with the following as the final production system:
+
+\begin{table}[h!]
+    \begin{tabular}{p{16cm}} 
+    \multicolumn{1}{c}{\textbf{Rules}} \\     
+    (1) $RLT \land LLT \rightarrow \text{NIL}$ \\  
+    (2) $RLT \land \neg LLT \rightarrow Md$ \\  
+    (3) $LLT \land \neg RLT \rightarrow Me$ \\  
+    (4) $y \geq 2.1 \rightarrow \text{NIL}$ \\  
+    (5) $\theta \leq -dinamic\_theta \land v_y > -0.3 \rightarrow Md$ \\  
+    (6) $\theta > dinamic\_theta \land v_y > -0.3 \rightarrow Me$ \\  
+    (7) $\theta > dinamic\_theta \land v_y \leq -0.3 \rightarrow Mp, Me$ \\  
+    (8) $\theta \leq -dinamic\_theta \land v_y \leq -0.3 \rightarrow Mp, Md$ \\  
+    (9) $v_\theta \leq -1.3 \land v_y > -0.3 \rightarrow Md$ \\  
+    (10) $v_\theta > 1.3 \land v_y > -0.3 \rightarrow Me$ \\  
+    (11) $v_\theta > 1.3 \land v_y \leq -0.3 \rightarrow Mp, Me$ \\  
+    (12) $v_\theta \leq -1.3 \land v_y \leq -0.3 \rightarrow Mp, Md$ \\  
+    (13) $v_x \leq -0.3 \land v_y > -0.3 \rightarrow Me$ \\  
+    (14) $v_x > 0.3 \land v_y > -0.3 \rightarrow Md$ \\  
+    (15) $v_x > 0.3 \land v_y \leq -0.3 \rightarrow Mp, Md$ \\  
+    (16) $x = 0 \rightarrow \text{NIL}$ \\  
+    (17) $x \leq 0.1 \rightarrow Me, Mp$ \\  
+    (18) $x > 0.1 \rightarrow Md, Mp$ \\  
+    (19) $y \geq  0.1 \rightarrow \text{NIL}$ \\
+    (20) $v_y \leq -0.3 \rightarrow Mp$ \\  
+    (21) $v_y > 0.3 \rightarrow \text{NIL}$ \\  
+    
+    \end{tabular}
+\end{table}
+
+\end{itemize}
+
+
+
+\end{document}  

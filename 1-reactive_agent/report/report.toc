@@ -1,0 +1,5 @@
+\contentsline {section}{Perceptions}{2}{section*.2}%
+\contentsline {section}{Actions}{2}{section*.4}%
+\contentsline {section}{Final Production System}{3}{section*.6}%
+\contentsline {section}{Score Progression without wind}{4}{section*.8}%
+\contentsline {section}{Score Progression with wind}{6}{section*.13}%
